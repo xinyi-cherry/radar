@@ -2,6 +2,7 @@ import numpy as np
 from cfar import *
 import matplotlib.pyplot as plt
 import scipy.io as io
+import os
 
 # 虚拟帧编码 使用单一天线数据(1号天线) 图像进行杂波滤除 图像大小
 def cal_RD(file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255, num_frames = 96):
@@ -72,7 +73,8 @@ def cal_RD(file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255,
         tmp = data_RD[:, y0[0], k].T
         tmp = tmp / (np.max(tmp) + np.finfo(float).eps)
         VT[:, k] = tmp
-        print('Frame %d complete.' % (k))
+        if(k % 10 ==0):
+            print("\033[34m %s@%s::\033[0m" % (filename,os.getpid())+'Frame %d complete.' % (k))
     
     # 杂波滤除
     new_VT = np.zeros((num_V, num_v_frames))
@@ -91,7 +93,7 @@ def cal_RD(file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255,
     plt.gca().yaxis.set_major_locator(plt.NullLocator())
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.margins(0, 0)
-    plt.savefig('output/figs/'+file_name+'_VT5'+str(file_num)+'.jpg', transparent=True, dpi=1, pad_inches=0)
+    plt.savefig("\033[34m %s@%s::\033[0m" % (filename,os.getpid())+'output/figs/'+file_name+'_VT5'+str(file_num)+'.jpg', transparent=True, dpi=1, pad_inches=0)
     print(file_name + ' new_VT complete')
     plt.close()
     
