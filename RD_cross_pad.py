@@ -74,7 +74,7 @@ def cal_RD(file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255,
         tmp = tmp / (np.max(tmp) + np.finfo(float).eps)
         VT[:, k] = tmp
         if(k % 10 ==0):
-            print("\033[34m %s@%s::\033[0m" % (filename,os.getpid())+'Frame %d complete.' % (k))
+            print("\033[34m %s@%s::\033[0m" % (file_name,os.getpid())+'Frame %d complete.' % (k))
     
     # 杂波滤除
     new_VT = np.zeros((num_V, num_v_frames))
@@ -93,7 +93,7 @@ def cal_RD(file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255,
     plt.gca().yaxis.set_major_locator(plt.NullLocator())
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.margins(0, 0)
-    plt.savefig("\033[34m %s@%s::\033[0m" % (filename,os.getpid())+'output/figs/'+file_name+'_VT5'+str(file_num)+'.jpg', transparent=True, dpi=1, pad_inches=0)
+    plt.savefig("\033[34m %s@%s::\033[0m" % (file_name,os.getpid())+'output/figs/'+file_name+'_VT5'+str(file_num)+'.jpg', transparent=True, dpi=1, pad_inches=0)
     print(file_name + ' new_VT complete')
     plt.close()
     
