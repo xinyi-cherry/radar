@@ -55,7 +55,7 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     angle_fft = np.zeros((num_mti,num_frame),dtype=float)
     data_fft = np.zeros((num_mti, num_ADCSamples, num_frame),dtype=complex)
     chirp_average = 0
-    plt.figure(3)
+    #plt.figure(3)
     for k in range(num_frame):
         for m in range(num_mti):
             data_fft[m,:,k] = np.fft.fft(data_mti[m,:,k])
@@ -82,13 +82,13 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
                     angle_fft[m,k] = angle_fft[m,k-1]
                 else:
                     angle_fft[m,k] = angle_fft[m-1,-1]
-            else:
-                plt.plot(range(num_ADCSamples),data_fft[m,:,k])
+            #else:
+                #plt.plot(range(num_ADCSamples),data_fft[m,:,k])
             data_index = np.argmax(abs(data_fft[m,:,k]))
             data_angle = np.angle(data_fft[m,data_index,k])
             angle_fft[m,k] = data_angle
         #break
-    plt.show()
+    #plt.show()
     plt.close()
     stft_data = np.asarray([])
     for k in range(num_frame):
