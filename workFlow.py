@@ -58,8 +58,8 @@ class RadarWorkFlow:
         adcData = io.loadmat(self.matSaveRootPosition+currentbfName+'_test.mat')
         adcData = adcData['adcData']
 
-        cal_RD(file_num=1, file_name=currentbfName,file_postion=self.figOutputPosition, adcData=adcData,
-                num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frames=self.options['num_frames'])
+        cal_RD(file_num=1, file_name=currentbfName, adcData=adcData,
+               num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frames=self.options['num_frames'])
         phase(type=1,file_name=currentbfName,file_num=1,adcData=adcData,file_position=self.figOutputPosition,
                 num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frame=self.options['num_frames'])
     #并行处理
@@ -88,7 +88,7 @@ opts={
 if __name__=='__main__':
     start_time = time.time()
     wf=RadarWorkFlow(opts)
-    wf.parallelProcess(17)
+    wf.parallelProcess(1)
     end_time = time.time()
     print("\033[31m MainThread@Message::\033[0m time used:", end_time - start_time)
 # wf.singleDataHandler(isFromNewBINfile=True,binfileName='slope180_chirp255_ababa2_Raw_0',isATorRD='RD')
