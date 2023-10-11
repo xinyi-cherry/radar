@@ -55,6 +55,7 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     angle_fft = np.zeros((num_mti,num_frame),dtype=float)
     data_fft = np.zeros((num_mti, num_ADCSamples, num_frame),dtype=complex)
     chirp_average = 0
+    plt.figure(3)
     for k in range(num_frame):
         for m in range(num_mti):
             data_fft[m,:,k] = np.fft.fft(data_mti[m,:,k])
@@ -62,28 +63,33 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
             if abs(max(data_fft[m,:,k]))>max_fft:
                 max_fft = abs(max(data_fft[m,:,k]))
                 max_index=data_index
-            if abs(max_fft)*0.6>abs(max(data_fft[m,:,k])):
+            if abs(max_fft)*0.5>abs(max(data_fft[m,:,k])):
                 max_range=max(max_range,abs(max(data_fft[m,:,k])))
     num = eval("1e-"+str(4+int(np.real(np.max(data_fft))//300)))
     num = 1e-5
+    print(max_range)
     for k in range(num_frame):
         for m in range(num_mti):
             data_fft[m,:,k] = np.fft.fft(data_mti[m,:,k])
-            #plt.plot(range(num_ADCSamples),data_mti[9,:,k])
-            #break
+            # plt.plot(range(num_ADCSamples),data_mti[9,:,k])
+            # break
             #print(np.real(max(data_fft[m,:,k])))
             # TH_cfar[m, :, k] = cfar(abs(data_fft[m, :, k]),num)
             # data_fft[m,:,k] = (TH_cfar[m,:,k] < abs(data_fft[m,:,k])) * (data_fft[m,:,k])
-            # #plt.plot(range(num_ADCSamples),data_fft[m,:,k])
+            
             if max(abs(data_fft[m,:,k]))<max_range*1.1:
                 if k!=0:
                     angle_fft[m,k] = angle_fft[m,k-1]
                 else:
                     angle_fft[m,k] = angle_fft[m-1,-1]
+            else:
+                plt.plot(range(num_ADCSamples),data_fft[m,:,k])
             data_index = np.argmax(abs(data_fft[m,:,k]))
             data_angle = np.angle(data_fft[m,data_index,k])
             angle_fft[m,k] = data_angle
         #break
+    plt.show()
+    plt.close()
     stft_data = np.asarray([])
     for k in range(num_frame):
         for m in range(num_mti):
@@ -120,6 +126,7 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.savefig(file_position+file_name+'_FT_768_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
+    print(num_frame*num_chirps)
     plt.figure()
     angle_data = angle_fft[:,0]
     for k in range(1,num_frame):
@@ -127,14 +134,14 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     #plt.plot(range(len(angle_data)-2),angle_data[:-2])
     #angle_data = np.asarray(double_exponential_smoothing(angle_data,0.03,0.03))
     
-    for i in range(1,len(angle_data)):
-        diff = angle_data[i] - angle_data[i-1]
-        if diff>np.pi:
-            angle_data[i:] = angle_data[i:] - 2*np.pi
-        elif diff<-np.pi:
-            angle_data[i:] = angle_data[i:] + 2*np.pi
+    # for i in range(1,len(angle_data)):
+    #     diff = angle_data[i] - angle_data[i-1]
+    #     if diff>np.pi:
+    #         angle_data[i:] = angle_data[i:] - 2*np.pi
+    #     elif diff<-np.pi:
+    #         angle_data[i:] = angle_data[i:] + 2*np.pi
     
-    angle_data = np.asarray(double_exponential_smoothing(angle_data,0.03,0.03))
+    # angle_data = np.asarray(double_exponential_smoothing(angle_data,0.03,0.03))
     #angle_data = angle_data[::128]
     # for i in range(0,len(angle_data)-1):
     #     angle_data[i] -= angle_data[i+1]
@@ -143,5 +150,6 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.axis('off')
     plt.margins(0,0)
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
+    #plt.show()
     plt.savefig(file_position+file_name+'_PT_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
