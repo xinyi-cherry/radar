@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2 
 
-ISDEBUG = True
+ISDEBUG = False
 
 def mainEdgeGetter(inImg:np.ndarray)->np.ndarray:
     #dbg
@@ -77,11 +77,8 @@ class debugPlot:
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
-    img=cv2.imread('./output/figs/data1_1_Raw_0_FT_512_1.jpg')
-=======
     img=cv2.imread('./output/figs/data1_1_Raw_0_FT_768_1.jpg')
->>>>>>> origin
     img=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
     rt=mainEdgeGetter(img)
+    cv2.imwrite('./output/figure/ft1.jpg',rt)
