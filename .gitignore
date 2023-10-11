@@ -1,0 +1,9 @@
+raw_data/
+raw_data2/
+raw_data3/
+ripe_data/
+output/
+__pycache__
+*.zip
+*.rar
+Radar/
