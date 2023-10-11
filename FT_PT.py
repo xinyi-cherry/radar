@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import scipy.io as io
 from scipy import signal
 
 # adcData = io.loadmat('testData\\1.mat')
@@ -24,7 +25,7 @@ def double_exponential_smoothing(series, alpha, beta):
         result.append(level+trend)
     return result
 
-def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255, num_frame = 32):
+def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255, num_frame = 96):
     adcData_T0 = adcData[0: 8: 1, :] # 8个天线的数据 复数形式
 
     data = np.zeros((1, num_chirps * num_ADCSamples * num_frame), dtype=complex) # 格式为一个天线的总数据大小
@@ -89,12 +90,13 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
             angle_fft[m,k] = data_angle
         #break
     #plt.show()
-    plt.close()
+    #plt.close()
+    print(file_name)
     stft_data = np.asarray([])
     for k in range(num_frame):
         for m in range(num_mti):
             stft_data=np.append(stft_data,data_mti[m,max_index,k])
-    # plt.figure(figsize=(10000,4096),dpi=1)
+    plt.figure(figsize=(10000,4096),dpi=1)
     plt.specgram(stft_data, NFFT=256, Fs=1, noverlap=128,pad_to=1024,detrend='linear')
     plt.ylim((-0.04,0.04))
     plt.axis('off')
@@ -102,7 +104,7 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.savefig(file_position+file_name+'_FT_256_'+str(file_num)+'.jpg',pad_inches=0)
     plt.close()
-    # plt.figure(figsize=(10000,4096),dpi=1)
+    plt.figure(figsize=(10000,4096),dpi=1)
     plt.specgram(stft_data, NFFT=512, Fs=1, noverlap=256,pad_to=2048,detrend='linear')
     plt.ylim((-0.04,0.04))
     plt.axis('off')
@@ -110,7 +112,7 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.savefig(file_position+file_name+'_FT_512_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
-    # plt.figure(figsize=(10000,4096),dpi=1)
+    plt.figure(figsize=(10000,4096),dpi=1)
     plt.specgram(stft_data, NFFT=1024, Fs=1, noverlap=512,pad_to=4096,detrend='linear')
     plt.ylim((-0.04,0.04))
     plt.axis('off')
@@ -118,7 +120,7 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.savefig(file_position+file_name+'_FT_1024_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
-    # plt.figure(figsize=(10000,4096),dpi=1)
+    plt.figure(figsize=(10000,4096),dpi=1)
     plt.specgram(stft_data, NFFT=768, Fs=1, noverlap=384,pad_to=3072,detrend='linear')
     plt.ylim((-0.04,0.04))
     plt.axis('off')
@@ -134,14 +136,14 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     #plt.plot(range(len(angle_data)-2),angle_data[:-2])
     #angle_data = np.asarray(double_exponential_smoothing(angle_data,0.03,0.03))
     
-    # for i in range(1,len(angle_data)):
-    #     diff = angle_data[i] - angle_data[i-1]
-    #     if diff>np.pi:
-    #         angle_data[i:] = angle_data[i:] - 2*np.pi
-    #     elif diff<-np.pi:
-    #         angle_data[i:] = angle_data[i:] + 2*np.pi
+    for i in range(1,len(angle_data)):
+        diff = angle_data[i] - angle_data[i-1]
+        if diff>np.pi:
+            angle_data[i:] = angle_data[i:] - 2*np.pi
+        elif diff<-np.pi:
+            angle_data[i:] = angle_data[i:] + 2*np.pi
     
-    # angle_data = np.asarray(double_exponential_smoothing(angle_data,0.03,0.03))
+    angle_data = np.asarray(double_exponential_smoothing(angle_data,0.03,0.03))
     #angle_data = angle_data[::128]
     # for i in range(0,len(angle_data)-1):
     #     angle_data[i] -= angle_data[i+1]
@@ -153,3 +155,9 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     #plt.show()
     plt.savefig(file_position+file_name+'_PT_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
+    
+if __name__ == '__main__':
+    file_name = 'data1_3_Raw_0_test'
+    adcData = io.loadmat('ripe_data/'+file_name+'.mat')
+    adcData = adcData['adcData']
+    phase(file_num=1, file_name=file_name, adcData=adcData,type=1,file_position='./')
