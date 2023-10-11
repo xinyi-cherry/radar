@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2 
 
-ISDEBUG = False
+ISDEBUG = True
 
 def mainEdgeGetter(inImg:np.ndarray)->np.ndarray:
     #dbg
@@ -25,7 +25,7 @@ def mainEdgeGetter(inImg:np.ndarray)->np.ndarray:
     _,tar=cv2.threshold(tar,10,255,cv2.THRESH_BINARY) #二值化以检测边缘
     dbg.recFigs('Tresh_binary its Edge',tar)
     # dbg.plot('subplt')
-    # dbg.plot('saveFig','./output/jpghandlerOutput/')
+    dbg.plot('saveFig','./output/')
     dbg.plot('showFigSingle')
     return tar
 
@@ -77,7 +77,7 @@ class debugPlot:
 
 
 if __name__ == '__main__':
-    img=cv2.imread('./output/figs/cth_10_11_Raw_0_FT_768_1.jpg')
+    img=cv2.imread('./output/figs/data1_1_Raw_0_FT_768_1.jpg')
     img=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
     rt=mainEdgeGetter(img)

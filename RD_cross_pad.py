@@ -93,6 +93,7 @@ def cal_RD(file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255,
     plt.margins(0, 0)
     plt.savefig('output/figs/'+file_name+'_VT5'+str(file_num)+'.jpg', transparent=True, dpi=1, pad_inches=0)
     print(file_name + ' new_VT complete')
+    plt.close()
     
 
 if __name__ == '__main__':
