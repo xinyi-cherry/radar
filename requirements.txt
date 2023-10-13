@@ -1,0 +1,7 @@
+tensorboard
+future
+numpy
+pandas
+opencv_python
+pytz
+tzdata
