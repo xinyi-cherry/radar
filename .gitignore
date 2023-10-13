@@ -1,9 +1,8 @@
-raw_data/*
-raw_data2/
+preprocess/raw_data/*.bin
+raw_data2/*.mat
 raw_data3/
-ripe_data/*
-output/figs/*
-!output/figs
+preprocess/ripe_data/*.mat
+output/figs/*.jpg
 output/figure
 __pycache__
 *.zip
