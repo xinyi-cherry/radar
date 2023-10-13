@@ -40,15 +40,15 @@ def getData(dataset):
     for filename in filenames:
         data = []
         for suf in suffix:
-            pic_read = cv2.imread('./output/figs/'+filename+suf)
+            pic_read = cv2.imread('../output/figs/'+filename+suf)
             pic_read = cv2.cvtColor(pic_read, cv2.COLOR_BGR2GRAY)
             data.append(pic_read)
-        pic_read = cv2.imread('./output/figs/'+filename+'VT51.jpg')
+        pic_read = cv2.imread('../output/figs/'+filename+'VT51.jpg')
         pic_read = cv2.cvtColor(pic_read, cv2.COLOR_BGR2GRAY)
         pic_read = cv2.resize(pic_read, (640, 480))
         data.append(pic_read)
         pic_data.append(data)
-    with open('dict.json', 'r') as f:
+    with open('../output/label/dict.json', 'r') as f:
         target_dict = json.load(f)
     for inputs in dec_inputs:
         words = inputs.split(' ')
@@ -77,7 +77,7 @@ def getData(dataset):
 
 
 # os.environ['CUDA_LAUNCH_BLOCKING'] = "1"    # 调试用
-pic_data, dec_inputs, dec_outputs, idx2word = getData('./data_train.csv')
+pic_data, dec_inputs, dec_outputs, idx2word = getData('../output/label/data_train.csv')
 loader = Data.DataLoader(NetDataSet(
     pic_data, dec_inputs, dec_outputs), 1, True)
 

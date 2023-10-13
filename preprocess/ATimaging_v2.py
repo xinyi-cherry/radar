@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 # from scipy import misc
 # from cv2 import imresize
 import cv2
+import os
 
 # adcData = io.loadmat('testData\\1.mat')
 # cluster_data = io.loadmat('F:\本科毕设—双频干涉SAR\现有代码\干涉数据\\net_output1.mat')
@@ -141,7 +142,7 @@ def cal_AT(type, file_num, file_name, adcData, num_ADCSamples = 128, num_chirps 
     plt.margins(0, 0)
     
     plt.savefig('output/'+file_name+'_AT_FW'+str(file_num+1)+'.jpg', transparent=True, dpi=1, pad_inches=0)
-    print(file_name + ' FW complete')
+    print("\033[34m %s@%s::\033[0m" % (file_name,os.getpid())+file_name + ' FW complete')
     
     # if type == 'B':
     #     plt.savefig('/home/ubuntu/my_codes/BB_val/AT_FW/AT_FW_'+str(file_num+1)+'.jpg', transparent=True, dpi=1, pad_inches=0)
@@ -162,7 +163,7 @@ def cal_AT(type, file_num, file_name, adcData, num_ADCSamples = 128, num_chirps 
     plt.margins(0, 0)
     
     plt.savefig('output/'+file_name+'_AT_FY'+str(file_num+1)+'.jpg', transparent=True, dpi=1, pad_inches=0)
-    print(file_name + ' FY complete')
+    print("\033[34m %s@%s::\033[0m" % (file_name,os.getpid())+file_name + ' FY complete')
     
     # plt.savefig('./AT_FY/AT_FY_'+str(file_num+1)+'.jpg', transparent=True, dpi=1, pad_inches=0)
     # if type == 'B':

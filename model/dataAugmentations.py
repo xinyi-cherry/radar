@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 #读取图片
 def read_PIL(filename):
-    img = Image.open("output/figs/"+filename)
+    img = Image.open("../output/figs/"+filename)
     return img
 
 #旋转
@@ -97,16 +97,16 @@ def ModelFilter(filename,savepath):
     new_img = img.filter(ImageFilter.ModeFilter(5))
     new_img.save(savepath+"ModelFilter_"+filename)
 
-filenames=os.listdir("output/figs/")
+filenames=os.listdir("../output/figs/")
 for filename in filenames:
-    Rotate(filename,"output/figs/")
-    Noise(filename,"output/figs/")
-    Brightness(filename,"output/figs/")
-    ColorBalance(filename,"output/figs/")
-    Contrast(filename,"output/figs/")
-    Sharpness(filename,"output/figs/")
-    BLUR(filename,"output/figs/")
-    DETAIL(filename,"output/figs/")
-    EDGE_ENHANCE(filename,"output/figs/")
-    SMOOTH(filename,"output/figs/")
-    ModelFilter(filename,"output/figs/")
+    Rotate(filename,"../output/figs/")
+    Noise(filename,"../output/figs/")
+    Brightness(filename,"../output/figs/")
+    ColorBalance(filename,"../output/figs/")
+    Contrast(filename,"../output/figs/")
+    Sharpness(filename,"../output/figs/")
+    BLUR(filename,"../output/figs/")
+    DETAIL(filename,"../output/figs/")
+    EDGE_ENHANCE(filename,"../output/figs/")
+    SMOOTH(filename,"../output/figs/")
+    ModelFilter(filename,"../output/figs/")

@@ -16,7 +16,7 @@ class RadarWorkFlow:
     }
     binOriginRootPosition="./raw_data/"
     matSaveRootPosition='./ripe_data/'
-    figOutputPosition='./output/figs/'
+    figOutputPosition='../output/figs'
     threads=2
     def __init__(self,
                  options={
@@ -27,7 +27,7 @@ class RadarWorkFlow:
                     },
                  binOriginRootPosition:str="./raw_data/",
                  matSaveRootPosition:str='./ripe_data/',
-                 figOutputPosition:str='./output/figs/'
+                 figOutputPosition:str='../output/figs'
                 ) -> None:
         self.options=options
         self.binOriginRootPosition=binOriginRootPosition

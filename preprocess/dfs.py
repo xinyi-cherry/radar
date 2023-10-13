@@ -36,7 +36,7 @@ class DFS:
                 
         cv2.imshow('',self.img)
         cv2.waitKey(0)
-        cv2.imwrite(outputaddr+filename+'_2.jpg', self.img)
+        cv2.imwrite(outputaddr+filename+'_dfs_ed.jpg', self.img)
 
     def dfs(self,x,y):
         self.max_y = max(self.max_y,y)
