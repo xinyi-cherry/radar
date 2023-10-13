@@ -3,6 +3,7 @@ raw_data2/
 raw_data3/
 ripe_data/*
 output/figs/*
+!output/figs
 output/figure
 __pycache__
 *.zip
