@@ -1,12 +1,13 @@
-preprocess/raw_data/*.bin
+preprocess/raw_data/*
+preprocess/ripe_data/*
 raw_data2/*.mat
 raw_data3/
-preprocess/ripe_data/*.mat
-output/figs/*.jpg
+output/figs/*
 output/figure
 __pycache__
 *.zip
 *.rar
 *.bin
 *.mat
+!.gitkeep
 Radar/
