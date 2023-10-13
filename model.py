@@ -5,9 +5,6 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.utils.data as Data
 
-src_len = 5 # enc_input max sequence length
-tgt_len = 6 # dec_input(=dec_output) max sequence length
-
 # Transformer Parameters
 d_model = 1024 # Embedding Size
 d_ff = 2048 # FeedForward dimension
@@ -15,7 +12,6 @@ d_k = d_v = 128  # dimension of K(=Q), V
 n_layers = 12  # number of Encoder of Decoder Layer
 n_heads = 12  # number of heads in Multi-Head Attention
 src_vocab_size = 640
-tgt_vocab_size = 3
 
 class DNNModel(nn.Module):
     def __init__(self):

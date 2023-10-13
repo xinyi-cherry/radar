@@ -3,8 +3,6 @@ import matplotlib.pyplot as plt
 import scipy.io as io
 from scipy import signal
 
-# adcData = io.loadmat('testData\\1.mat')
-# adcData = adcData['adcData']
 def double_exponential_smoothing(series, alpha, beta):
     """
         series - dataset with timeseries

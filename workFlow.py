@@ -1,7 +1,6 @@
 from bin2mat_new import bin2matNew
 import scipy.io as io
 from RD_cross_pad import cal_RD
-from ATimaging_v2 import cal_AT
 from FT_PT import phase
 from  multiprocessing import Process,Pool
 import os
