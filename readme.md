@@ -49,5 +49,5 @@ flowchart LR
     i6-->conv6_1-->conv6_2-->conv6_3-->sum6_1-->conv6_4
     conv6_1--resNet-->sum6_1
     sum(Σ)
-    conv4 & conv2_4 & conv3_4 & conv4_4 & conv5_4 & conv6_4 --> sum --> C(Conv) --> C2(Conv) --> Res(640*1024\nFeauture) --> T[Transformer]
+    conv4 & conv2_4 & conv3_4 & conv4_4 & conv5_4 & conv6_4 --> sum --> C(Conv) --> C2(Conv) --> fc1(fc1) --> fc2(fc2) --> fc3(fc3) --> Res(640*1024\nFeauture) --> T[Transformer]
 ```

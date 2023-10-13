@@ -9,11 +9,11 @@ src_len = 5 # enc_input max sequence length
 tgt_len = 6 # dec_input(=dec_output) max sequence length
 
 # Transformer Parameters
-d_model = 1024# Embedding Size
+d_model = 1024 # Embedding Size
 d_ff = 2048 # FeedForward dimension
 d_k = d_v = 128  # dimension of K(=Q), V
-n_layers = 8  # number of Encoder of Decoder Layer
-n_heads = 8  # number of heads in Multi-Head Attention
+n_layers = 12  # number of Encoder of Decoder Layer
+n_heads = 12  # number of heads in Multi-Head Attention
 src_vocab_size = 640
 tgt_vocab_size = 3
 
@@ -23,79 +23,90 @@ class DNNModel(nn.Module):
         dropout = 0.2
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(dropout)
-        self.conv1_1 = nn.Conv1d(480,512,3,padding=1)
-        self.conv1_2 = nn.Conv1d(512,512,3,padding=1)
-        self.conv1_3 = nn.Conv1d(512,512,3,padding=1)
-        self.conv1_4 = nn.Conv1d(512,512,3,padding=1)
+        self.conv1_1 = nn.Conv2d(1,128,3,padding=1)
+        self.conv1_2 = nn.Conv2d(128,512,3,padding=1)
+        self.conv1_3 = nn.Conv2d(512,512,3,padding=1)
+        self.conv1_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv2_1 = nn.Conv1d(480,512,3,padding=1)
-        self.conv2_2 = nn.Conv1d(512,512,3,padding=1)
-        self.conv2_3 = nn.Conv1d(512,512,3,padding=1)
-        self.conv2_4 = nn.Conv1d(512,512,3,padding=1)
+        self.conv2_1 = nn.Conv2d(1,128,3,padding=1)
+        self.conv2_2 = nn.Conv2d(128,512,3,padding=1)
+        self.conv2_3 = nn.Conv2d(512,512,3,padding=1)
+        self.conv2_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv3_1 = nn.Conv1d(480,512,3,padding=1)
-        self.conv3_2 = nn.Conv1d(512,512,3,padding=1)
-        self.conv3_3 = nn.Conv1d(512,512,3,padding=1)
-        self.conv3_4 = nn.Conv1d(512,512,3,padding=1)
+        self.conv3_1 = nn.Conv2d(1,128,3,padding=1)
+        self.conv3_2 = nn.Conv2d(128,512,3,padding=1)
+        self.conv3_3 = nn.Conv2d(512,512,3,padding=1)
+        self.conv3_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv4_1 = nn.Conv1d(480,512,3,padding=1)
-        self.conv4_2 = nn.Conv1d(512,512,3,padding=1)
-        self.conv4_3 = nn.Conv1d(512,512,3,padding=1)
-        self.conv4_4 = nn.Conv1d(512,512,3,padding=1)
+        self.conv4_1 = nn.Conv2d(1,128,3,padding=1)
+        self.conv4_2 = nn.Conv2d(128,512,3,padding=1)
+        self.conv4_3 = nn.Conv2d(512,512,3,padding=1)
+        self.conv4_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv5_1 = nn.Conv1d(480,512,3,padding=1)
-        self.conv5_2 = nn.Conv1d(512,512,3,padding=1)
-        self.conv5_3 = nn.Conv1d(512,512,3,padding=1)
-        self.conv5_4 = nn.Conv1d(512,512,3,padding=1)
+        self.conv5_1 = nn.Conv2d(1,128,3,padding=1)
+        self.conv5_2 = nn.Conv2d(128,512,3,padding=1)
+        self.conv5_3 = nn.Conv2d(512,512,3,padding=1)
+        self.conv5_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv6_1 = nn.Conv1d(480,512,3,padding=1)
-        self.conv6_2 = nn.Conv1d(512,512,3,padding=1)
-        self.conv6_3 = nn.Conv1d(512,512,3,padding=1)
-        self.conv6_4 = nn.Conv1d(512,512,3,padding=1)
+        self.conv6_1 = nn.Conv2d(1,128,3,padding=1)
+        self.conv6_2 = nn.Conv2d(128,512,3,padding=1)
+        self.conv6_3 = nn.Conv2d(512,512,3,padding=1)
+        self.conv6_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv_merge_1 = nn.Conv1d(512,768,3,padding=1)
-        self.conv_merge_2 = nn.Conv1d(768,1024,3,padding=1)
+        self.conv_merge_1 = nn.Conv2d(512,768,3,padding=1)
+        self.conv_merge_2 = nn.Conv2d(768,1024,3,padding=1)
+        
+        self.fc_1 = nn.Linear(1024,512)
+        self.fc_2 = nn.Linear(512,1)
+        self.fc_3 = nn.Linear(480,1024)
+        
     def forward(self, pic_data):
         pic_data=pic_data[0]
         x1 = pic_data[0]
+        x1 = x1.reshape((1,x1.shape[0],x1.shape[1]))
         x1 = self.relu(self.conv1_1(x1))
-        xtemp = x1
         x1 = self.relu(self.conv1_2(x1))
+        xtemp = x1
         x1 = self.relu(self.conv1_3(x1)) + xtemp
         x1 = self.relu(self.conv1_4(x1))
         
         x2 = pic_data[1]
+        x2 = x2.reshape((1,x2.shape[0],x2.shape[1]))
         x2 = self.relu(self.conv2_1(x2))
-        xtemp = x2
         x2 = self.relu(self.conv2_2(x2))
+        xtemp = x2
         x2 = self.relu(self.conv2_3(x2)) + xtemp
         x2 = self.relu(self.conv2_4(x2))
         
         x3 = pic_data[2]
+        x3 = x3.reshape((1,x3.shape[0],x3.shape[1]))
         x3 = self.relu(self.conv3_1(x3))
-        xtemp = x3
         x3 = self.relu(self.conv3_2(x3))
+        xtemp = x3
         x3 = self.relu(self.conv3_3(x3)) + xtemp
         x3 = self.relu(self.conv3_4(x3))
         
         x4 = pic_data[3]
+        x4 = x4.reshape((1,x4.shape[0],x4.shape[1]))
         x4 = self.relu(self.conv4_1(x4))
-        xtemp = x4
         x4 = self.relu(self.conv4_2(x4))
+        xtemp = x4
         x4 = self.relu(self.conv4_3(x4)) + xtemp
         x4 = self.relu(self.conv4_4(x4))
         
         x5 = pic_data[4]
+        x5 = x5.reshape((1,x5.shape[0],x5.shape[1]))
         x5 = self.relu(self.conv5_1(x5))
-        xtemp = x5
         x5 = self.relu(self.conv5_2(x5))
+        xtemp = x5
         x5 = self.relu(self.conv5_3(x5)) + xtemp
         x5 = self.relu(self.conv5_4(x5))
         
         x6 = pic_data[5]
-        x6 = self.relu(self.conv6_1(x6))
-        xtemp = x6
+        x6 = x6.reshape((1,x6.shape[0],x6.shape[1]))
+        x6 = self.relu(self.conv6_1(x6)) 
         x6 = self.relu(self.conv6_2(x6))
+        xtemp = x6
         x6 = self.relu(self.conv6_3(x6)) + xtemp
         x6 = self.relu(self.conv6_4(x6))
         
@@ -103,6 +114,12 @@ class DNNModel(nn.Module):
         x = self.relu(self.conv_merge_1(x))
         x = self.dropout(x)
         x = self.relu(self.conv_merge_2(x))
+        x = self.dropout(x)
+        x = x.permute(2,1,0)
+        x = self.fc_1(x)
+        x = self.fc_2(x)
+        x = x.reshape((x.shape[0],x.shape[1]))
+        x = self.fc_3(x)
         return x
 
 class PositionalEncoding(nn.Module):
@@ -257,17 +274,17 @@ class Encoder(nn.Module):
         '''
         enc_inputs: [batch_size, src_len]
         '''
-        enc_outputs = self.src_emb.from_pretrained(enc_inputs,freeze=False) # [batch_size, src_len, d_model]
-        enc_inputs = torch.ones((1,enc_inputs.shape[0]))
+        enc_outputs = self.src_emb.from_pretrained(enc_inputs.transpose(0, 1),freeze=True) # [batch_size, src_len, d_model]
+        enc_inputs = torch.ones((1,enc_inputs.shape[1]))
         enc_output = (enc_outputs(torch.LongTensor([i for i in range(src_vocab_size)]).cuda())).reshape(1,src_vocab_size,d_model)
         enc_outputs = self.pos_emb(enc_output.transpose(0, 1)).transpose(0, 1).cuda() # [batch_size, src_len, d_model]
         enc_self_attn_mask = get_attn_pad_mask(enc_inputs, enc_inputs).cuda() # [batch_size, src_len, src_len]
         enc_self_attns = []
         for layer in self.layers:
             # enc_outputs: [batch_size, src_len, d_model], enc_self_attn: [batch_size, n_heads, src_len, src_len]
-            enc_output, enc_self_attn = layer(enc_output, enc_self_attn_mask)
+            enc_outputs, enc_self_attn = layer(enc_outputs, enc_self_attn_mask)
             enc_self_attns.append(enc_self_attn)
-        return enc_output, enc_self_attns
+        return enc_outputs, enc_self_attns
 
 class Decoder(nn.Module):
     def __init__(self,length):

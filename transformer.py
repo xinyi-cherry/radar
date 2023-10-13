@@ -290,6 +290,7 @@ class Transformer(nn.Module):
 
 model = Transformer().cuda()
 criterion = nn.CrossEntropyLoss(ignore_index=0)
+ctc_loss = nn.CTCLoss(reduction='mean')
 optimizer = optim.SGD(model.parameters(), lr=1e-3, momentum=0.99)
 
 for epoch in range(1000):
@@ -303,6 +304,7 @@ for epoch in range(1000):
       # outputs: [batch_size * tgt_len, tgt_vocab_size]
       outputs, enc_self_attns, dec_self_attns, dec_enc_attns = model(enc_inputs, dec_inputs)
       loss = criterion(outputs, dec_outputs.view(-1))
+      print(outputs)
       print('Epoch:', '%04d' % (epoch + 1), 'loss =', '{:.6f}'.format(loss))
 
       optimizer.zero_grad()

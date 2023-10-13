@@ -1,7 +1,2 @@
 filename,dec_inputs,dec_outputs
-w_apple_Raw_0_,S apple,apple E
-w_apple2_Raw_0_,S apple,apple E
-w_apply_Raw_0_,S apply,apply E
-w_apply2_Raw_0_,S apply,apply E
-w_map_Raw_0_,S map,map E
-w_map2_Raw_0_,S map,map E
+data1_1_Raw_0_,S turn on bluetooth P P P P P P,turn on bluetooth P P P P P P E

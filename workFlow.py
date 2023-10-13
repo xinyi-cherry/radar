@@ -58,8 +58,8 @@ class RadarWorkFlow:
         adcData = io.loadmat(self.matSaveRootPosition+currentbfName+'_test.mat')
         adcData = adcData['adcData']
 
-        #cal_RD(file_num=1, file_name=currentbfName, adcData=adcData,
-        #        num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frames=self.options['num_frames'])
+        cal_RD(file_num=1, file_name=currentbfName, adcData=adcData,
+                num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frames=self.options['num_frames'])
         phase(type=1,file_name=currentbfName,file_num=1,adcData=adcData,file_position=self.figOutputPosition,
                 num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frame=self.options['num_frames'])
     #并行处理

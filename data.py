@@ -6,6 +6,10 @@ import cv2
 from model import Transformer
 import json
 import torch
+import torch.nn.functional as F
+import matplotlib.pyplot as plt
+import numpy as np
+from torch.utils.tensorboard import SummaryWriter
 
 class NetDataSet(Data.Dataset):
   def __init__(self, enc_inputs, dec_inputs, dec_outputs):
@@ -33,7 +37,7 @@ def getData(dataset):
             pic_read = cv2.imread('./output/figs/'+filename+suf)
             pic_read = cv2.cvtColor(pic_read, cv2.COLOR_BGR2GRAY) 
             data.append(pic_read)
-        pic_read = cv2.imread('./output/figs/'+filename+'VT_cross_pad1.jpg')
+        pic_read = cv2.imread('./output/figs/'+filename+'VT51.jpg')
         pic_read = cv2.cvtColor(pic_read, cv2.COLOR_BGR2GRAY) 
         pic_read = cv2.resize(pic_read,(640,480))
         data.append(pic_read)
@@ -66,15 +70,17 @@ def getData(dataset):
     return torch.FloatTensor(pic_data),torch.LongTensor(dec_inputs_num),torch.LongTensor(dec_outputs_num),idx2word
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 pic_data,dec_inputs,dec_outputs,idx2word = getData('./data_train.csv')
-        
-    
 loader = Data.DataLoader(NetDataSet(pic_data, dec_inputs, dec_outputs), 1, True)
 
 model = Transformer(len(idx2word)).cuda()
+ctc_loss = nn.CTCLoss(reduction='mean')
 criterion = nn.CrossEntropyLoss(ignore_index=0)
-optimizer = optim.SGD(model.parameters(), lr=1e-2, momentum=0.99)
+optimizer = optim.SGD(model.parameters(), lr=1e-4, momentum=0.99)
 print(model.parameters())
-for epoch in range(1000):
+writer = SummaryWriter()
+loss_value = []
+for epoch in range(100):
+    loss_batch = []
     for enc_inputs, dec_inputs, dec_outputs in loader:
       '''
       enc_inputs: [batch_size, src_len]
@@ -84,11 +90,19 @@ for epoch in range(1000):
       enc_inputs, dec_inputs, dec_outputs = enc_inputs.cuda(), dec_inputs.cuda(), dec_outputs.cuda()
       # outputs: [batch_size * tgt_len, tgt_vocab_size]
       outputs, enc_self_attns, dec_self_attns, dec_enc_attns = model(enc_inputs, dec_inputs)
-      outputs = torch.tensor(outputs,dtype=torch.float32)
-      dec_inputs = torch.tensor(dec_inputs,dtype=torch.float32)
-      loss = criterion(outputs, dec_outputs.view(-1))
+    #   outputs = torch.tensor(outputs,dtype=torch.float32)
+    #  dec_inputs = torch.tensor(dec_inputs,dtype=torch.float32)
+      mask = dec_outputs.view(-1)!=0
+      mask_tensor = torch.masked_select(dec_outputs.view(-1), mask)
+      loss = ctc_loss(F.log_softmax(outputs), mask_tensor,torch.tensor(10).type(torch.long),torch.tensor(len(mask_tensor)).type(torch.long))
+      loss_batch.append(float(loss))
       print('Epoch:', '%04d' % (epoch + 1), 'loss =', '{:.6f}'.format(loss))
       loss.requires_grad_(True)
       optimizer.zero_grad()
       loss.backward()
       optimizer.step()
+    #  print([x.grad for x in optimizer.param_groups[0]['params']])
+    writer.add_scalar('Loss/train', np.mean(loss_batch), epoch)
+    loss_value.append(np.mean(loss_batch))
+plt.plot(range(100),loss_value)
+plt.show()
