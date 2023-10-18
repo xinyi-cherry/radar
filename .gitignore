@@ -9,5 +9,6 @@ __pycache__
 *.rar
 *.bin
 *.mat
+*.jpg
 !.gitkeep
 Radar/

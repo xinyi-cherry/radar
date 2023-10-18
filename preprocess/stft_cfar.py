@@ -1,6 +1,15 @@
 import numpy as np
 import cv2
+import os
 
+def stft_cfar_warp(file_name,file_position):
+    
+    for i in [512,768,1024]:
+        org=cv2.imread(file_position+file_name+'_FT_'+str(i)+'_1'+'.jpg')
+        org=cv2.cvtColor(org,cv2.COLOR_BGR2GRAY)
+        cv2.imwrite(file_position+file_name+'_FT_'+str(i)+'_Cfared'+'.jpg',stft_cfar(org))
+        print("\033[34m %s@%s::\033[0m" % (file_name,os.getpid()) +'saved'+ file_position+file_name+'_FT_'+str(i)+'_Cfared'+'.jpg' + 'complete')
+    
 def stft_cfar(org:np.ndarray):
     cfarvar=np.zeros_like(org)
     cfared=org.copy()

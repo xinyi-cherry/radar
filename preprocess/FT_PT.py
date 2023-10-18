@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.io as io
 from scipy import signal
+import os
 
 def double_exponential_smoothing(series, alpha, beta):
     """
@@ -130,7 +131,8 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.savefig(file_position+file_name+'_FT_768_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
-    print(num_frame*num_chirps)
+    print("\033[34m %s@%s::\033[0m" % (file_name,os.getpid()) +'saved::'+ file_position+file_name+'_FT_'+'x'+'_1'+'.jpg' + 'complete!')
+    # print(num_frame*num_chirps)
     plt.figure()
     angle_data = angle_fft[:,0]
     for k in range(1,num_frame):

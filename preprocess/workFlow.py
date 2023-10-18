@@ -5,6 +5,8 @@ from FT_PT import phase
 from  multiprocessing import Process,Pool
 import os
 import time
+import stft_cfar
+
 
 class RadarWorkFlow:
     # global vars
@@ -27,7 +29,7 @@ class RadarWorkFlow:
                     },
                  binOriginRootPosition:str="./raw_data/",
                  matSaveRootPosition:str='./ripe_data/',
-                 figOutputPosition:str='../output/figs'
+                 figOutputPosition:str='../output/figs/'
                 ) -> None:
         self.options=options
         self.binOriginRootPosition=binOriginRootPosition
@@ -61,6 +63,7 @@ class RadarWorkFlow:
                 num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frames=self.options['num_frames'])
         phase(type=1,file_name=currentbfName,file_num=1,adcData=adcData,file_position=self.figOutputPosition,
                 num_ADCSamples=self.options['num_ADCSamples'],num_chirps=self.options['num_chirps'],num_frame=self.options['num_frames'])
+        stft_cfar.stft_cfar_warp(currentbfName,self.figOutputPosition)
     #并行处理
     def parallelProcess(self,threads:int=2):
         """
@@ -87,7 +90,7 @@ opts={
 if __name__=='__main__':
     start_time = time.time()
     wf=RadarWorkFlow(opts)
-    wf.parallelProcess(7)
+    wf.parallelProcess(2)
     end_time = time.time()
     print("\033[31m MainThread@Message::\033[0m time used:", end_time - start_time)
 # wf.singleDataHandler(isFromNewBINfile=True,binfileName='slope180_chirp255_ababa2_Raw_0',isATorRD='RD')
