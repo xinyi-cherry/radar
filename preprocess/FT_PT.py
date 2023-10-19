@@ -78,11 +78,10 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
             #print(np.real(max(data_fft[m,:,k])))
             # TH_cfar[m, :, k] = cfar(abs(data_fft[m, :, k]),num)
             # data_fft[m,:,k] = (TH_cfar[m,:,k] < abs(data_fft[m,:,k])) * (data_fft[m,:,k])
-            dataTest.append(data_fft[m,data_index,k])
-            
             #else:
                 #plt.plot(range(num_ADCSamples),data_fft[m,:,k])
             data_index = np.argmax(abs(data_fft[m,:,k]))
+            dataTest.append(data_fft[m,data_index,k])
             data_angle = np.angle(data_fft[m,data_index,k])
             angle_fft[m,k] = data_angle
             if max(abs(data_fft[m,:,k]))<max_range*1.1:
