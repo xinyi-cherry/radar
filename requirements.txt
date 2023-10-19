@@ -5,3 +5,4 @@ pandas
 opencv_python
 pytz
 tzdata
+tqdm
