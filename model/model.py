@@ -34,15 +34,15 @@ class DNNModel(nn.Module):
         self.conv3_3 = nn.Conv2d(512,512,3,padding=1)
         self.conv3_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv4_1 = nn.Conv2d(1,128,3,padding=1)
-        self.conv4_2 = nn.Conv2d(128,512,3,padding=1)
-        self.conv4_3 = nn.Conv2d(512,512,3,padding=1)
-        self.conv4_4 = nn.Conv2d(512,512,3,padding=1)
+        # self.conv4_1 = nn.Conv2d(1,128,3,padding=1)
+        # self.conv4_2 = nn.Conv2d(128,512,3,padding=1)
+        # self.conv4_3 = nn.Conv2d(512,512,3,padding=1)
+        # self.conv4_4 = nn.Conv2d(512,512,3,padding=1)
         
-        self.conv5_1 = nn.Conv2d(1,128,3,padding=1)
-        self.conv5_2 = nn.Conv2d(128,512,3,padding=1)
-        self.conv5_3 = nn.Conv2d(512,512,3,padding=1)
-        self.conv5_4 = nn.Conv2d(512,512,3,padding=1)
+        # self.conv5_1 = nn.Conv2d(1,128,3,padding=1)
+        # self.conv5_2 = nn.Conv2d(128,512,3,padding=1)
+        # self.conv5_3 = nn.Conv2d(512,512,3,padding=1)
+        # self.conv5_4 = nn.Conv2d(512,512,3,padding=1)
         
         self.conv6_1 = nn.Conv2d(1,128,3,padding=1)
         self.conv6_2 = nn.Conv2d(128,512,3,padding=1)
@@ -82,21 +82,21 @@ class DNNModel(nn.Module):
         x3 = self.relu(self.conv3_3(x3)) + xtemp
         x3 = self.relu(self.conv3_4(x3))
         
-        x4 = pic_data[3]
-        x4 = x4.reshape((1,x4.shape[0],x4.shape[1]))
-        x4 = self.relu(self.conv4_1(x4))
-        x4 = self.relu(self.conv4_2(x4))
-        xtemp = x4
-        x4 = self.relu(self.conv4_3(x4)) + xtemp
-        x4 = self.relu(self.conv4_4(x4))
+        # x4 = pic_data[3]
+        # x4 = x4.reshape((1,x4.shape[0],x4.shape[1]))
+        # x4 = self.relu(self.conv4_1(x4))
+        # x4 = self.relu(self.conv4_2(x4))
+        # xtemp = x4
+        # x4 = self.relu(self.conv4_3(x4)) + xtemp
+        # x4 = self.relu(self.conv4_4(x4))
         
-        x5 = pic_data[4]
-        x5 = x5.reshape((1,x5.shape[0],x5.shape[1]))
-        x5 = self.relu(self.conv5_1(x5))
-        x5 = self.relu(self.conv5_2(x5))
-        xtemp = x5
-        x5 = self.relu(self.conv5_3(x5)) + xtemp
-        x5 = self.relu(self.conv5_4(x5))
+        # x5 = pic_data[4]
+        # x5 = x5.reshape((1,x5.shape[0],x5.shape[1]))
+        # x5 = self.relu(self.conv5_1(x5))
+        # x5 = self.relu(self.conv5_2(x5))
+        # xtemp = x5
+        # x5 = self.relu(self.conv5_3(x5)) + xtemp
+        # x5 = self.relu(self.conv5_4(x5))
         
         x6 = pic_data[5]
         x6 = x6.reshape((1,x6.shape[0],x6.shape[1]))
@@ -106,7 +106,7 @@ class DNNModel(nn.Module):
         x6 = self.relu(self.conv6_3(x6)) + xtemp
         x6 = self.relu(self.conv6_4(x6))
         
-        x = x1+x2+x3+x4+x5+x6
+        x = x1+x2+x3+x6 #x1+x2+x3+x4+x5+x6
         x = self.relu(self.conv_merge_1(x))
         x = self.dropout(x)
         x = self.relu(self.conv_merge_2(x))

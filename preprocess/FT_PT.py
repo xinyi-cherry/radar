@@ -84,11 +84,12 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
             dataTest.append(data_fft[m,data_index,k])
             data_angle = np.angle(data_fft[m,data_index,k])
             angle_fft[m,k] = data_angle
-            if max(abs(data_fft[m,:,k]))<max_range*1.1:
-                if k!=0:
-                    angle_fft[m,k] = angle_fft[m,k-1]
-                else:
-                    angle_fft[m,k] = angle_fft[m-1,-1]
+            # TODO dubug这个负优化
+            # if max(abs(data_fft[m,:,k]))<max_range*1.1:
+            #     if k!=0:
+            #         angle_fft[m,k] = angle_fft[m,k-1]
+            #     else:
+            #         angle_fft[m,k] = angle_fft[m-1,-1]
         #break
     #plt.show()
     #plt.close()
@@ -100,14 +101,14 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
         rel=np.real(dt).tolist()
         ans = 0
         for j in tqdm.tqdm(range(1, lent)):
-            ans+=((rel[j]*(img[j]-img[j-1])-img[j]*(rel[j]-rel[j-1]))/(rel[j]**2+img[j]**2))
+            ans+=((rel[j]*(img[j]-img[j-1])-img[j]*(rel[j]-rel[j-1]))/(rel[j]**2+img[j]**2+1e-9))
             ret.append(ans)
         return ret
     plt.figure()
     plt.plot(range(len(dataTest)-1),dacm(np.array(dataTest)))
-    plt.axis('off')
-    plt.margins(0,0)
-    plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
+    # plt.axis('off')
+    # plt.margins(0,0)
+    # plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     plt.savefig(file_position+file_name+'_newPT_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
     print(file_name)
@@ -173,15 +174,15 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     #     angle_data[i] -= angle_data[i+1]
     plt.plot(range(len(angle_data)-2),angle_data[:-2])
     
-    plt.axis('off')
-    plt.margins(0,0)
-    plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
+    #plt.axis('off')
+    #plt.margins(0,0)
+    #plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
     #plt.show()
     plt.savefig(file_position+file_name+'_PT_'+str(file_num)+'.jpg', pad_inches=0)
     plt.close()
     
 if __name__ == '__main__':
-    file_name = 'data1_3_Raw_0_test'
+    file_name = 'x3_Raw_0_test'
     adcData = io.loadmat('ripe_data/'+file_name+'.mat')
     adcData = adcData['adcData']
     phase(file_num=1, file_name=file_name, adcData=adcData,type=1,file_position='./')

@@ -99,7 +99,7 @@ def cal_RD(file_num, file_name, adcData, num_ADCSamples = 128, num_chirps = 255,
     
 
 if __name__ == '__main__':
-    file_name = 'cth_10_11_Raw_0'
+    file_name = 'x3_Raw_0_test'
     adcData = io.loadmat('ripe_data/'+file_name+'.mat')
     adcData = adcData['adcData']
     cal_RD(file_num=1, file_name=file_name, adcData=adcData)

@@ -15,6 +15,7 @@ from torch.utils.tensorboard import SummaryWriter
 epoch_num = 100
 lr = 1e-4
 
+
 class NetDataSet(Data.Dataset):
     def __init__(self, enc_inputs, dec_inputs, dec_outputs):
         super(NetDataSet, self).__init__()
@@ -35,8 +36,10 @@ def getData(dataset):
     pic_data = []
     dec_inputs = data_list['dec_inputs']
     dec_outputs = data_list['dec_outputs']
-    suffix = ['FT_256_1.jpg', 'FT_512_1.jpg',
-              'FT_768_1.jpg', 'FT_1024_1.jpg', 'PT_1.jpg']
+    # suffix = ['FT_256_1.jpg', 'FT_512_1.jpg',
+    #          'FT_768_1.jpg', 'FT_1024_1.jpg', 'PT_1.jpg']
+    suffix = ['FT_512_Cfared.jpg',
+              'FT_768_Cfared.jpg', 'FT_1024_Cfared.jpg']
     for filename in filenames:
         data = []
         for suf in suffix:
@@ -77,7 +80,8 @@ def getData(dataset):
 
 
 # os.environ['CUDA_LAUNCH_BLOCKING'] = "1"    # 调试用
-pic_data, dec_inputs, dec_outputs, idx2word = getData('../output/label/data_train.csv')
+pic_data, dec_inputs, dec_outputs, idx2word = getData(
+    '../output/label/data_train.csv')
 loader = Data.DataLoader(NetDataSet(
     pic_data, dec_inputs, dec_outputs), 1, True)
 
