@@ -5,6 +5,19 @@ from scipy import signal
 import os
 import tqdm
 
+def svd(M):
+    """
+    Args:
+        M: numpy matrix of shape (m, n)
+    Returns:
+        u: numpy array of shape (m, m).
+        s: numpy array of shape (k).
+        v: numpy array of shape (n, n).
+    """
+    u,s,v = np.linalg.svd(M, full_matrices=True)
+
+    return u, s, v
+
 def double_exponential_smoothing(series, alpha, beta):
     """
         series - dataset with timeseries
@@ -42,46 +55,33 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
 
     data = np.zeros((1, num_chirps * num_ADCSamples * num_frame), dtype=complex) # 格式为一个天线的总数据大小
     
-    data += adcData_T0[4, :] # 3号天线
+    data += adcData_T0[2, :] # 3号天线
     
     # for i in range(4): # 相干积累
     #     data += adcData_T0[2 * i, :]
     
     data_frame = np.zeros((num_chirps, num_ADCSamples, num_frame), dtype=complex) # 三维数据
+    data_frame_svd = np.zeros_like(data_frame)
     for k in range(num_frame):
         for m in range(num_chirps):
             data_frame[m, :, k] = data[0, num_chirps * num_ADCSamples * k + m * num_ADCSamples
                                         : num_chirps * num_ADCSamples * k + (m + 1) * num_ADCSamples]
-
-    # MTI
-    # num_mti = num_chirps - 2 # 62
-    # data_mti = np.zeros((num_mti, num_ADCSamples, num_frame), dtype=complex)
-    # for k in range(num_frame):
-    #     for m in range(num_mti):
-    #         data_mti[m,:,k] = data_frame[m+2,:,k] - data_frame[m,:,k]
-    
-    # 相量均值相消
-    num_mti = num_chirps
-    data_mti = data_frame
-    
-    data_fil = np.zeros(num_ADCSamples,dtype=complex)
-    for k in range(num_frame):
-        for m in range(num_mti):
-            data_fil += data_frame[m,:,k]
-    data_fil /= k*m
-    for k in range(num_frame):
-        for m in range(num_mti):
-            data_mti[m,:,k]-=data_fil
+            U, S, V = svd(data_frame[:, :, k])
+            S[0] = 0 # 去除最大值: 静态杂波
+            MS = np.zeros_like(data_frame[:, :, k], dtype=complex)
+            for i in range(min(num_chirps, num_ADCSamples)):
+                MS[i, i] = S[i]
+            data_frame_svd[:, :, k] = U @ MS @ V
 
     max_index=0
     max_fft=0
     max_range = 0
-    angle_fft = np.zeros((num_mti,num_frame),dtype=float)
-    data_fft = np.zeros((num_mti, num_ADCSamples, num_frame),dtype=complex)
+    angle_fft = np.zeros((num_chirps,num_frame),dtype=float)
+    data_fft = np.zeros((num_chirps, num_ADCSamples, num_frame),dtype=complex)
 
     for k in range(num_frame):
-        for m in range(num_mti):
-            data_fft[m,:,k] = np.fft.fft(data_mti[m,:,k])
+        for m in range(num_chirps):
+            data_fft[m,:,k] = np.fft.fft(data_frame_svd[m,:,k])
             data_index = np.argmax(abs(data_fft[m,:,k]))
             if abs(max(data_fft[m,:,k]))>max_fft:
                 max_fft = abs(max(data_fft[m,:,k]))
@@ -91,8 +91,8 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
 
     dataTest = []
     for k in range(num_frame):
-        for m in range(num_mti):
-            data_fft[m,:,k] = np.fft.fft(data_mti[m,:,k])
+        for m in range(num_chirps):
+            data_fft[m,:,k] = np.fft.fft(data_frame_svd[m,:,k])
             #plt.plot(range(num_ADCSamples),data_fft[m,:,k])
             data_index = np.argmax(abs(data_fft[m,:,k]))
             dataTest.append(data_fft[m,data_index,k])
@@ -108,16 +108,11 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     # plt.close()
     plt.figure()
     dacm_data = dacm(np.array(dataTest))
-    dacm_data = np.asarray(double_exponential_smoothing(dacm_data,0.001,0.001))
     dacm_delta = []
     for i in range(len(dacm_data)-1):
         dacm_delta.append(dacm_data[i+1]-dacm_data[i])
-    for i in range(1,len(dacm_delta)-1):
-        if(abs(dacm_delta[i]-dacm_delta[i-1])>np.pi and abs(dacm_delta[i+1]-dacm_delta[i])>np.pi):
-            dacm_delta[i] = (dacm_delta[i+1]+dacm_delta[i-1])/2
-    for i in range(1,len(dacm_data)):
-        dacm_data[i]=dacm_data[i-1] + dacm_delta[i-1]
-    plt.plot(range(len(dacm_delta)),dacm_delta)
+    # dacm_delta = np.asarray(double_exponential_smoothing(dacm_delta,0.03,0.03))
+    plt.plot(range(len(dacm_data)),dacm_data)
     # plt.axis('off')
     # plt.margins(0,0)
     # plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
@@ -126,8 +121,8 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.close()
     stft_data = np.asarray([])
     for k in range(num_frame):
-        for m in range(num_mti):
-            stft_data=np.append(stft_data,data_mti[m,max_index,k])
+        for m in range(num_chirps):
+            stft_data=np.append(stft_data,data_frame_svd[m,max_index,k])
     stfts = [512,768,1024]
     for nfft in stfts:
         plt.figure()
@@ -171,7 +166,16 @@ def phase(type,file_position, file_num, file_name, adcData, num_ADCSamples = 128
     plt.close()
     
 if __name__ == '__main__':
-    file_name = 'data1_1_Raw_0_test'
+    file_name = 'data1_3_Raw_0_test'
     adcData = io.loadmat('ripe_data/'+file_name+'.mat')
     adcData = adcData['adcData']
-    phase(file_num=1, file_name=file_name, adcData=adcData,type=1,file_position='./')
+    phase(
+        file_num=3,
+        file_name=file_name,
+        adcData=adcData,
+        type=1,
+        file_position='./',
+        num_ADCSamples = 128,
+        num_chirps = 255,
+        num_frame = 96
+    )

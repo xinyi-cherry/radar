@@ -1,0 +1,771 @@
+filename,dec_inputs,dec_outputs
+data1_1_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_2_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_3_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_4_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_5_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_6_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_7_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_8_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_9_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data1_10_Raw_0_,S turn on bluetooth,turn on bluetooth E
+data2_1_Raw_0_,S speak louder,speak louder E
+data2_2_Raw_0_,S speak louder,speak louder E
+data2_3_Raw_0_,S speak louder,speak louder E
+data2_4_Raw_0_,S speak louder,speak louder E
+data2_5_Raw_0_,S speak louder,speak louder E
+data2_6_Raw_0_,S speak louder,speak louder E
+data2_7_Raw_0_,S speak louder,speak louder E
+data2_8_Raw_0_,S speak louder,speak louder E
+data2_9_Raw_0_,S speak louder,speak louder E
+data2_10_Raw_0_,S speak louder,speak louder E
+data3_1_Raw_0_,S keep your voice down,keep your voice down E
+data3_2_Raw_0_,S keep your voice down,keep your voice down E
+data3_3_Raw_0_,S keep your voice down,keep your voice down E
+data3_4_Raw_0_,S keep your voice down,keep your voice down E
+data3_5_Raw_0_,S keep your voice down,keep your voice down E
+data3_6_Raw_0_,S keep your voice down,keep your voice down E
+data3_7_Raw_0_,S keep your voice down,keep your voice down E
+data3_8_Raw_0_,S keep your voice down,keep your voice down E
+data3_9_Raw_0_,S keep your voice down,keep your voice down E
+data3_10_Raw_0_,S keep your voice down,keep your voice down E
+data4_1_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_2_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_3_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_4_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_5_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_6_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_7_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_8_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_9_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data4_10_Raw_0_,S turn the volume to fifty,turn the volume to fifty E
+data5_1_Raw_0_,S the next song,the next song E
+data5_2_Raw_0_,S the next song,the next song E
+data5_3_Raw_0_,S the next song,the next song E
+data5_4_Raw_0_,S the next song,the next song E
+data5_5_Raw_0_,S the next song,the next song E
+data5_6_Raw_0_,S the next song,the next song E
+data5_7_Raw_0_,S the next song,the next song E
+data5_8_Raw_0_,S the next song,the next song E
+data5_9_Raw_0_,S the next song,the next song E
+data5_10_Raw_0_,S the next song,the next song E
+data6_1_Raw_0_,S change to another song,change to another song E
+data6_2_Raw_0_,S change to another song,change to another song E
+data6_3_Raw_0_,S change to another song,change to another song E
+data6_4_Raw_0_,S change to another song,change to another song E
+data6_5_Raw_0_,S change to another song,change to another song E
+data6_6_Raw_0_,S change to another song,change to another song E
+data6_7_Raw_0_,S change to another song,change to another song E
+data6_8_Raw_0_,S change to another song,change to another song E
+data6_9_Raw_0_,S change to another song,change to another song E
+data6_10_Raw_0_,S change to another song,change to another song E
+data7_1_Raw_0_,S next one,next one E
+data7_2_Raw_0_,S next one,next one E
+data7_3_Raw_0_,S next one,next one E
+data7_4_Raw_0_,S next one,next one E
+data7_5_Raw_0_,S next one,next one E
+data7_6_Raw_0_,S next one,next one E
+data7_7_Raw_0_,S next one,next one E
+data7_8_Raw_0_,S next one,next one E
+data7_9_Raw_0_,S next one,next one E
+data7_10_Raw_0_,S next one,next one E
+data8_1_Raw_0_,S last one,last one E
+data8_2_Raw_0_,S last one,last one E
+data8_3_Raw_0_,S last one,last one E
+data8_4_Raw_0_,S last one,last one E
+data8_5_Raw_0_,S last one,last one E
+data8_6_Raw_0_,S last one,last one E
+data8_7_Raw_0_,S last one,last one E
+data8_8_Raw_0_,S last one,last one E
+data8_9_Raw_0_,S last one,last one E
+data8_10_Raw_0_,S last one,last one E
+data9_1_Raw_0_,S suspend,suspend E
+data9_2_Raw_0_,S suspend,suspend E
+data9_3_Raw_0_,S suspend,suspend E
+data9_4_Raw_0_,S suspend,suspend E
+data9_5_Raw_0_,S suspend,suspend E
+data9_6_Raw_0_,S suspend,suspend E
+data9_7_Raw_0_,S suspend,suspend E
+data9_8_Raw_0_,S suspend,suspend E
+data9_9_Raw_0_,S suspend,suspend E
+data9_10_Raw_0_,S suspend,suspend E
+data10_1_Raw_0_,S continue to play,continue to play E
+data10_2_Raw_0_,S continue to play,continue to play E
+data10_3_Raw_0_,S continue to play,continue to play E
+data10_4_Raw_0_,S continue to play,continue to play E
+data10_5_Raw_0_,S continue to play,continue to play E
+data10_6_Raw_0_,S continue to play,continue to play E
+data10_7_Raw_0_,S continue to play,continue to play E
+data10_8_Raw_0_,S continue to play,continue to play E
+data10_9_Raw_0_,S continue to play,continue to play E
+data10_10_Raw_0_,S continue to play,continue to play E
+data11_1_Raw_0_,S single cycle,single cycle E
+data11_2_Raw_0_,S single cycle,single cycle E
+data11_3_Raw_0_,S single cycle,single cycle E
+data11_4_Raw_0_,S single cycle,single cycle E
+data11_5_Raw_0_,S single cycle,single cycle E
+data11_6_Raw_0_,S single cycle,single cycle E
+data11_7_Raw_0_,S single cycle,single cycle E
+data11_8_Raw_0_,S single cycle,single cycle E
+data11_9_Raw_0_,S single cycle,single cycle E
+data11_10_Raw_0_,S single cycle,single cycle E
+data12_1_Raw_0_,S list loop,list loop E
+data12_2_Raw_0_,S list loop,list loop E
+data12_3_Raw_0_,S list loop,list loop E
+data12_4_Raw_0_,S list loop,list loop E
+data12_5_Raw_0_,S list loop,list loop E
+data12_6_Raw_0_,S list loop,list loop E
+data12_7_Raw_0_,S list loop,list loop E
+data12_8_Raw_0_,S list loop,list loop E
+data12_9_Raw_0_,S list loop,list loop E
+data12_10_Raw_0_,S list loop,list loop E
+data13_1_Raw_0_,S shutdown,shutdown E
+data13_2_Raw_0_,S shutdown,shutdown E
+data13_3_Raw_0_,S shutdown,shutdown E
+data13_4_Raw_0_,S shutdown,shutdown E
+data13_5_Raw_0_,S shutdown,shutdown E
+data13_6_Raw_0_,S shutdown,shutdown E
+data13_7_Raw_0_,S shutdown,shutdown E
+data13_8_Raw_0_,S shutdown,shutdown E
+data13_9_Raw_0_,S shutdown,shutdown E
+data13_10_Raw_0_,S shutdown,shutdown E
+data14_1_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_2_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_3_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_4_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_5_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_6_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_7_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_8_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_9_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data14_10_Raw_0_,S turn on the dehumidifier,turn on the dehumidifier E
+data15_1_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_2_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_3_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_4_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_5_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_6_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_7_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_8_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_9_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data15_10_Raw_0_,S turn off the dehumidifier,turn off the dehumidifier E
+data16_1_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_2_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_3_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_4_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_5_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_6_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_7_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_8_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_9_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data16_10_Raw_0_,S set the dehumidifier to low wind speed,set the dehumidifier to low wind speed E
+data17_1_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_2_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_3_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_4_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_5_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_6_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_7_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_8_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_9_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data17_10_Raw_0_,S set the dehumidifier to high wind speed,set the dehumidifier to high wind speed E
+data18_1_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_2_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_3_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_4_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_5_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_6_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_7_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_8_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_9_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data18_10_Raw_0_,S adjust the dehumidifier to stroke gear,adjust the dehumidifier to stroke gear E
+data19_1_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_2_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_3_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_4_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_5_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_6_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_7_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_8_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_9_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data19_10_Raw_0_,S inquire about indoor humidity,inquire about indoor humidity E
+data20_1_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_2_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_3_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_4_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_5_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_6_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_7_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_8_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_9_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data20_10_Raw_0_,S turn on the pet feeder,turn on the pet feeder E
+data21_1_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_2_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_3_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_4_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_5_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_6_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_7_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_8_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_9_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data21_10_Raw_0_,S turn off the pet feeder,turn off the pet feeder E
+data22_1_Raw_0_,S feed cat food,feed cat food E
+data22_2_Raw_0_,S feed cat food,feed cat food E
+data22_3_Raw_0_,S feed cat food,feed cat food E
+data22_4_Raw_0_,S feed cat food,feed cat food E
+data22_5_Raw_0_,S feed cat food,feed cat food E
+data22_6_Raw_0_,S feed cat food,feed cat food E
+data22_7_Raw_0_,S feed cat food,feed cat food E
+data22_8_Raw_0_,S feed cat food,feed cat food E
+data22_9_Raw_0_,S feed cat food,feed cat food E
+data22_10_Raw_0_,S feed cat food,feed cat food E
+data23_1_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_2_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_3_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_4_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_5_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_6_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_7_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_8_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_9_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data23_10_Raw_0_,S turn on the dishwasher,turn on the dishwasher E
+data24_1_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_2_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_3_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_4_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_5_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_6_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_7_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_8_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_9_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data24_10_Raw_0_,S turn off the dishwasher,turn off the dishwasher E
+data25_1_Raw_0_,S start washing dishes,start washing dishes E
+data25_2_Raw_0_,S start washing dishes,start washing dishes E
+data25_3_Raw_0_,S start washing dishes,start washing dishes E
+data25_4_Raw_0_,S start washing dishes,start washing dishes E
+data25_5_Raw_0_,S start washing dishes,start washing dishes E
+data25_6_Raw_0_,S start washing dishes,start washing dishes E
+data25_7_Raw_0_,S start washing dishes,start washing dishes E
+data25_8_Raw_0_,S start washing dishes,start washing dishes E
+data25_9_Raw_0_,S start washing dishes,start washing dishes E
+data25_10_Raw_0_,S start washing dishes,start washing dishes E
+data26_1_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_2_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_3_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_4_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_5_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_6_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_7_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_8_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_9_Raw_0_,S stop washing dishes,stop washing dishes E
+data26_10_Raw_0_,S stop washing dishes,stop washing dishes E
+data27_1_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_2_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_3_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_4_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_5_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_6_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_7_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_8_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_9_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data27_10_Raw_0_,S set the dishwasher to standard washing mode,set the dishwasher to standard washing mode E
+data28_1_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_2_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_3_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_4_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_5_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_6_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_7_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_8_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_9_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data28_10_Raw_0_,S set the dishwasher to quick washing mode,set the dishwasher to quick washing mode E
+data29_1_Raw_0_,S open the curtains,open the curtains E
+data29_2_Raw_0_,S open the curtains,open the curtains E
+data29_3_Raw_0_,S open the curtains,open the curtains E
+data29_4_Raw_0_,S open the curtains,open the curtains E
+data29_5_Raw_0_,S open the curtains,open the curtains E
+data29_6_Raw_0_,S open the curtains,open the curtains E
+data29_7_Raw_0_,S open the curtains,open the curtains E
+data29_8_Raw_0_,S open the curtains,open the curtains E
+data29_9_Raw_0_,S open the curtains,open the curtains E
+data29_10_Raw_0_,S open the curtains,open the curtains E
+data30_1_Raw_0_,S close the curtains,close the curtains E
+data30_2_Raw_0_,S close the curtains,close the curtains E
+data30_3_Raw_0_,S close the curtains,close the curtains E
+data30_4_Raw_0_,S close the curtains,close the curtains E
+data30_5_Raw_0_,S close the curtains,close the curtains E
+data30_6_Raw_0_,S close the curtains,close the curtains E
+data30_7_Raw_0_,S close the curtains,close the curtains E
+data30_8_Raw_0_,S close the curtains,close the curtains E
+data30_9_Raw_0_,S close the curtains,close the curtains E
+data30_10_Raw_0_,S close the curtains,close the curtains E
+data31_1_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_2_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_3_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_4_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_5_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_6_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_7_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_8_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_9_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data31_10_Raw_0_,S turn on the humidifier,turn on the humidifier E
+data32_1_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_2_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_3_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_4_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_5_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_6_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_7_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_8_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_9_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data32_10_Raw_0_,S turn off the humidifier,turn off the humidifier E
+data33_1_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_2_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_3_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_4_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_5_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_6_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_7_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_8_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_9_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data33_10_Raw_0_,S set the wind speed of the humidifier to first gear,set the wind speed of the humidifier to first gear E
+data34_1_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_2_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_3_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_4_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_5_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_6_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_7_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_8_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_9_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data34_10_Raw_0_,S turn up the wind speed of the humidifier,turn up the wind speed of the humidifier E
+data35_1_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_2_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_3_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_4_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_5_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_6_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_7_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_8_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_9_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data35_10_Raw_0_,S set the wind speed of the humidifier to maximum,set the wind speed of the humidifier to maximum E
+data36_1_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_2_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_3_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_4_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_5_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_6_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_7_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_8_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_9_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data36_10_Raw_0_,S inquire about the indoor temperature,inquire about the indoor temperature E
+data37_1_Raw_0_,S turn on the tv,turn on the tv E
+data37_2_Raw_0_,S turn on the tv,turn on the tv E
+data37_3_Raw_0_,S turn on the tv,turn on the tv E
+data37_4_Raw_0_,S turn on the tv,turn on the tv E
+data37_5_Raw_0_,S turn on the tv,turn on the tv E
+data37_6_Raw_0_,S turn on the tv,turn on the tv E
+data37_7_Raw_0_,S turn on the tv,turn on the tv E
+data37_8_Raw_0_,S turn on the tv,turn on the tv E
+data37_9_Raw_0_,S turn on the tv,turn on the tv E
+data37_10_Raw_0_,S turn on the tv,turn on the tv E
+data38_1_Raw_0_,S turn off the tv,turn off the tv E
+data38_2_Raw_0_,S turn off the tv,turn off the tv E
+data38_3_Raw_0_,S turn off the tv,turn off the tv E
+data38_4_Raw_0_,S turn off the tv,turn off the tv E
+data38_5_Raw_0_,S turn off the tv,turn off the tv E
+data38_6_Raw_0_,S turn off the tv,turn off the tv E
+data38_7_Raw_0_,S turn off the tv,turn off the tv E
+data38_8_Raw_0_,S turn off the tv,turn off the tv E
+data38_9_Raw_0_,S turn off the tv,turn off the tv E
+data38_10_Raw_0_,S turn off the tv,turn off the tv E
+data39_1_Raw_0_,S mute tv,mute tv E
+data39_2_Raw_0_,S mute tv,mute tv E
+data39_3_Raw_0_,S mute tv,mute tv E
+data39_4_Raw_0_,S mute tv,mute tv E
+data39_5_Raw_0_,S mute tv,mute tv E
+data39_6_Raw_0_,S mute tv,mute tv E
+data39_7_Raw_0_,S mute tv,mute tv E
+data39_8_Raw_0_,S mute tv,mute tv E
+data39_9_Raw_0_,S mute tv,mute tv E
+data39_10_Raw_0_,S mute tv,mute tv E
+data40_1_Raw_0_,S unmute tv,unmute tv E
+data40_2_Raw_0_,S unmute tv,unmute tv E
+data40_3_Raw_0_,S unmute tv,unmute tv E
+data40_4_Raw_0_,S unmute tv,unmute tv E
+data40_5_Raw_0_,S unmute tv,unmute tv E
+data40_6_Raw_0_,S unmute tv,unmute tv E
+data40_7_Raw_0_,S unmute tv,unmute tv E
+data40_8_Raw_0_,S unmute tv,unmute tv E
+data40_9_Raw_0_,S unmute tv,unmute tv E
+data40_10_Raw_0_,S unmute tv,unmute tv E
+data41_1_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_2_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_3_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_4_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_5_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_6_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_7_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_8_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_9_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data41_10_Raw_0_,S turn on the air conditioner,turn on the air conditioner E
+data42_1_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_2_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_3_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_4_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_5_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_6_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_7_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_8_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_9_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data42_10_Raw_0_,S turn off the air conditioner,turn off the air conditioner E
+data43_1_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_2_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_3_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_4_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_5_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_6_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_7_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_8_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_9_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data43_10_Raw_0_,S set the air conditioner to automatic mode,set the air conditioner to automatic mode E
+data44_1_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_2_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_3_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_4_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_5_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_6_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_7_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_8_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_9_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data44_10_Raw_0_,S set the air conditioner to heating mode,set the air conditioner to heating mode E
+data45_1_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_2_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_3_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_4_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_5_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_6_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_7_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_8_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_9_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data45_10_Raw_0_,S set the air conditioner to twenty six degrees,set the air conditioner to twenty six degrees E
+data46_1_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_2_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_3_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_4_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_5_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_6_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_7_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_8_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_9_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data46_10_Raw_0_,S what is the current temperature of the air conditioner,what is the current temperature of the air conditioner E
+data47_1_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_2_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_3_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_4_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_5_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_6_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_7_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_8_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_9_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data47_10_Raw_0_,S turn up the air conditioner by two degrees,turn up the air conditioner by two degrees E
+data48_1_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_2_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_3_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_4_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_5_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_6_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_7_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_8_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_9_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data48_10_Raw_0_,S set the wind speed of the air conditioner to first gear,set the wind speed of the air conditioner to first gear E
+data49_1_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_2_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_3_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_4_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_5_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_6_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_7_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_8_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_9_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data49_10_Raw_0_,S turn up the wind speed of the air conditioner,turn up the wind speed of the air conditioner E
+data50_1_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_2_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_3_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_4_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_5_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_6_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_7_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_8_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_9_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data50_10_Raw_0_,S set the air conditioner wind speed to maximum,set the air conditioner wind speed to maximum E
+data51_1_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_2_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_3_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_4_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_5_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_6_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_7_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_8_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_9_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data51_10_Raw_0_,S set the air conditioner to sweep up and down,set the air conditioner to sweep up and down E
+data52_1_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_2_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_3_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_4_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_5_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_6_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_7_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_8_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_9_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data52_10_Raw_0_,S set the air conditioner to sweep left and right,set the air conditioner to sweep left and right E
+data53_1_Raw_0_,S turn on the light,turn on the light E
+data53_2_Raw_0_,S turn on the light,turn on the light E
+data53_3_Raw_0_,S turn on the light,turn on the light E
+data53_4_Raw_0_,S turn on the light,turn on the light E
+data53_5_Raw_0_,S turn on the light,turn on the light E
+data53_6_Raw_0_,S turn on the light,turn on the light E
+data53_7_Raw_0_,S turn on the light,turn on the light E
+data53_8_Raw_0_,S turn on the light,turn on the light E
+data53_9_Raw_0_,S turn on the light,turn on the light E
+data53_10_Raw_0_,S turn on the light,turn on the light E
+data54_1_Raw_0_,S turn off the light,turn off the light E
+data54_2_Raw_0_,S turn off the light,turn off the light E
+data54_3_Raw_0_,S turn off the light,turn off the light E
+data54_4_Raw_0_,S turn off the light,turn off the light E
+data54_5_Raw_0_,S turn off the light,turn off the light E
+data54_6_Raw_0_,S turn off the light,turn off the light E
+data54_7_Raw_0_,S turn off the light,turn off the light E
+data54_8_Raw_0_,S turn off the light,turn off the light E
+data54_9_Raw_0_,S turn off the light,turn off the light E
+data54_10_Raw_0_,S turn off the light,turn off the light E
+data55_1_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_2_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_3_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_4_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_5_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_6_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_7_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_8_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_9_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data55_10_Raw_0_,S set the light brightness to fifty,set the light brightness to fifty E
+data56_1_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_2_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_3_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_4_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_5_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_6_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_7_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_8_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_9_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data56_10_Raw_0_,S set the light to the brightest,set the light to the brightest E
+data57_1_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_2_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_3_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_4_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_5_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_6_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_7_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_8_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_9_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data57_10_Raw_0_,S start sweeping the floor,start sweeping the floor E
+data58_1_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_2_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_3_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_4_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_5_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_6_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_7_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_8_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_9_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data58_10_Raw_0_,S stop sweeping the floor,stop sweeping the floor E
+data59_1_Raw_0_,S go back and recharge,go back and recharge E
+data59_2_Raw_0_,S go back and recharge,go back and recharge E
+data59_3_Raw_0_,S go back and recharge,go back and recharge E
+data59_4_Raw_0_,S go back and recharge,go back and recharge E
+data59_5_Raw_0_,S go back and recharge,go back and recharge E
+data59_6_Raw_0_,S go back and recharge,go back and recharge E
+data59_7_Raw_0_,S go back and recharge,go back and recharge E
+data59_8_Raw_0_,S go back and recharge,go back and recharge E
+data59_9_Raw_0_,S go back and recharge,go back and recharge E
+data59_10_Raw_0_,S go back and recharge,go back and recharge E
+data60_1_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_2_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_3_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_4_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_5_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_6_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_7_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_8_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_9_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data60_10_Raw_0_,S what is the remaining power of the sweeping robot,what is the remaining power of the sweeping robot E
+data61_1_Raw_0_,S open the socket,open the socket E
+data61_2_Raw_0_,S open the socket,open the socket E
+data61_3_Raw_0_,S open the socket,open the socket E
+data61_4_Raw_0_,S open the socket,open the socket E
+data61_5_Raw_0_,S open the socket,open the socket E
+data61_6_Raw_0_,S open the socket,open the socket E
+data61_7_Raw_0_,S open the socket,open the socket E
+data61_8_Raw_0_,S open the socket,open the socket E
+data61_9_Raw_0_,S open the socket,open the socket E
+data61_10_Raw_0_,S open the socket,open the socket E
+data62_1_Raw_0_,S close the socket,close the socket E
+data62_2_Raw_0_,S close the socket,close the socket E
+data62_3_Raw_0_,S close the socket,close the socket E
+data62_4_Raw_0_,S close the socket,close the socket E
+data62_5_Raw_0_,S close the socket,close the socket E
+data62_6_Raw_0_,S close the socket,close the socket E
+data62_7_Raw_0_,S close the socket,close the socket E
+data62_8_Raw_0_,S close the socket,close the socket E
+data62_9_Raw_0_,S close the socket,close the socket E
+data62_10_Raw_0_,S close the socket,close the socket E
+data63_1_Raw_0_,S turn on the fan,turn on the fan E
+data63_2_Raw_0_,S turn on the fan,turn on the fan E
+data63_3_Raw_0_,S turn on the fan,turn on the fan E
+data63_4_Raw_0_,S turn on the fan,turn on the fan E
+data63_5_Raw_0_,S turn on the fan,turn on the fan E
+data63_6_Raw_0_,S turn on the fan,turn on the fan E
+data63_7_Raw_0_,S turn on the fan,turn on the fan E
+data63_8_Raw_0_,S turn on the fan,turn on the fan E
+data63_9_Raw_0_,S turn on the fan,turn on the fan E
+data63_10_Raw_0_,S turn on the fan,turn on the fan E
+data64_1_Raw_0_,S turn off the fan,turn off the fan E
+data64_2_Raw_0_,S turn off the fan,turn off the fan E
+data64_3_Raw_0_,S turn off the fan,turn off the fan E
+data64_4_Raw_0_,S turn off the fan,turn off the fan E
+data64_5_Raw_0_,S turn off the fan,turn off the fan E
+data64_6_Raw_0_,S turn off the fan,turn off the fan E
+data64_7_Raw_0_,S turn off the fan,turn off the fan E
+data64_8_Raw_0_,S turn off the fan,turn off the fan E
+data64_9_Raw_0_,S turn off the fan,turn off the fan E
+data64_10_Raw_0_,S turn off the fan,turn off the fan E
+data65_1_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_2_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_3_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_4_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_5_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_6_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_7_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_8_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_9_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data65_10_Raw_0_,S set the wind speed of the fan to first gear,set the wind speed of the fan to first gear E
+data66_1_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_2_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_3_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_4_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_5_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_6_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_7_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_8_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_9_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data66_10_Raw_0_,S turn up the wind speed of the fan,turn up the wind speed of the fan E
+data67_1_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_2_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_3_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_4_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_5_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_6_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_7_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_8_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_9_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data67_10_Raw_0_,S set the wind speed of the fan to the maximum,set the wind speed of the fan to the maximum E
+data68_1_Raw_0_,S turn on the camera,turn on the camera E
+data68_2_Raw_0_,S turn on the camera,turn on the camera E
+data68_3_Raw_0_,S turn on the camera,turn on the camera E
+data68_4_Raw_0_,S turn on the camera,turn on the camera E
+data68_5_Raw_0_,S turn on the camera,turn on the camera E
+data68_6_Raw_0_,S turn on the camera,turn on the camera E
+data68_7_Raw_0_,S turn on the camera,turn on the camera E
+data68_8_Raw_0_,S turn on the camera,turn on the camera E
+data68_9_Raw_0_,S turn on the camera,turn on the camera E
+data68_10_Raw_0_,S turn on the camera,turn on the camera E
+data69_1_Raw_0_,S turn off the camera,turn off the camera E
+data69_2_Raw_0_,S turn off the camera,turn off the camera E
+data69_3_Raw_0_,S turn off the camera,turn off the camera E
+data69_4_Raw_0_,S turn off the camera,turn off the camera E
+data69_5_Raw_0_,S turn off the camera,turn off the camera E
+data69_6_Raw_0_,S turn off the camera,turn off the camera E
+data69_7_Raw_0_,S turn off the camera,turn off the camera E
+data69_8_Raw_0_,S turn off the camera,turn off the camera E
+data69_9_Raw_0_,S turn off the camera,turn off the camera E
+data69_10_Raw_0_,S turn off the camera,turn off the camera E
+data70_1_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_2_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_3_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_4_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_5_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_6_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_7_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_8_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_9_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data70_10_Raw_0_,S turn on the rice cooker,turn on the rice cooker E
+data71_1_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_2_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_3_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_4_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_5_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_6_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_7_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_8_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_9_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data71_10_Raw_0_,S trun off the rice cooker,trun off the rice cooker E
+data72_1_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_2_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_3_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_4_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_5_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_6_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_7_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_8_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_9_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data72_10_Raw_0_,S turn on the air purifier,turn on the air purifier E
+data73_1_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_2_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_3_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_4_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_5_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_6_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_7_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_8_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_9_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data73_10_Raw_0_,S turn off the air purifier,turn off the air purifier E
+data74_1_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_2_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_3_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_4_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_5_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_6_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_7_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_8_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_9_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data74_10_Raw_0_,S set the air purifier to automatic mode,set the air purifier to automatic mode E
+data75_1_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_2_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_3_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_4_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_5_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_6_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_7_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_8_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_9_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data75_10_Raw_0_,S set the air purifier to sleep mode,set the air purifier to sleep mode E
+data76_1_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_2_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_3_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_4_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_5_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_6_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_7_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_8_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_9_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data76_10_Raw_0_,S set the air purifier wind speed to first gear,set the air purifier wind speed to first gear E
+data77_1_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_2_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_3_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_4_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_5_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_6_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_7_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_8_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_9_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E
+data77_10_Raw_0_,S set the air purifier wind speed to medium,set the air purifier wind speed to medium E

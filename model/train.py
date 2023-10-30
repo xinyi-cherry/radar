@@ -10,6 +10,7 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import numpy as np
 from torch.utils.tensorboard import SummaryWriter
+from beam_search import beam_search
 
 # Model Config
 epoch_num = 100
@@ -91,14 +92,45 @@ criterion = nn.CrossEntropyLoss(ignore_index=0)
 optimizer = optim.SGD(model.parameters(), lr=lr, momentum=0.99)
 writer = SummaryWriter()
 loss_value = []
+
+a = set()
+s = set()
+with open('labels.json','r') as g:
+    labels = json.load(g)
+def expand(data):
+    if(tuple(data) in s):
+        return
+    s.add(tuple(data))
+    if len(data)==12:
+        a.add(tuple(data))
+        return
+    for i in range(len(data)+1):
+        if i==0:
+            newData = [data[0]] + data
+            expand(newData)
+            continue
+        if i==len(data):
+            newData = data + [data[len(data)-1]]
+            expand(newData)
+            break
+        newData = data[0:i] + [data[i-1]] + data[i:]
+        expand(newData)
+        newData = data[0:i] + [data[i]] + data[i:]
+        expand(newData)
+
 for epoch in range(epoch_num):
     loss_batch = []
+    wcr_batch = []
+    acc_cnt=0
+    total = 0
     for enc_inputs, dec_inputs, dec_outputs in loader:
         '''
         enc_inputs: [batch_size, src_len]
         dec_inputs: [batch_size, tgt_len]
         dec_outputs: [batch_size, tgt_len]
         '''
+        total+=1
+        labels_rate = []
         enc_inputs, dec_inputs, dec_outputs = enc_inputs.cuda(
         ), dec_inputs.cuda(), dec_outputs.cuda()
         # outputs: [batch_size * tgt_len, tgt_vocab_size]
@@ -107,14 +139,49 @@ for epoch in range(epoch_num):
         mask = dec_outputs.view(-1) != 0
         mask_tensor = torch.masked_select(dec_outputs.view(-1), mask)
         loss = ctc_loss(F.log_softmax(outputs), mask_tensor, torch.tensor(
-            10).type(torch.long), torch.tensor(len(mask_tensor)).type(torch.long))
+            12).type(torch.long), torch.tensor(len(mask_tensor)).type(torch.long))
+        output_rate = F.softmax(outputs)
+        search = beam_search(output_rate, '')   
+        flag=1
+        correct = 0
+        for label in labels:
+            a.clear()
+            s.clear()
+            expand(label)
+            max_num = 0
+            for items in a:
+                rate = 1
+                for i in range(len(items)):
+                    rate *= output_rate[i][items[i]]
+                max_num = max(max_num,rate)
+            labels_rate.append(max_num)
+        m = max(labels_rate)
+        m_index = labels_rate.index(m)
+        print(labels[m_index])
+        for i in range(len(search)):
+            if search[i]==2:
+                break
+            if search[i]!=dec_outputs.view(-1)[i]:
+                flag=0
+            else:
+                correct+=1
+        word_correct_rate = correct/len(search)
+        wcr_batch.append(word_correct_rate)
+        if flag:
+            acc_cnt+=1
+        
+        print(dec_outputs.view(-1))
+        print(outputs.data.max(1, keepdim=True)[1].flatten())
+        print(search)
         loss_batch.append(float(loss))
         print('Epoch:', '%04d' % (epoch + 1), 'loss =', '{:.6f}'.format(loss))
         loss.requires_grad_(True)
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+    writer.add_scalar('acc/train', acc_cnt/total, epoch)
     writer.add_scalar('Loss/train', np.mean(loss_batch), epoch)
+    writer.add_scalar('wcr/train', np.mean(wcr_batch), epoch)
     loss_value.append(np.mean(loss_batch))
 plt.plot(range(epoch_num), loss_value)
 plt.show()
